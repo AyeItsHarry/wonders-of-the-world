@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain attribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }      
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+      }
+    }
+  };
+</script>
+
+<head>
+  <title>Giza Pyramids | New 7 Wonders of the world!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <section id="header"></section>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="assets/img/trollar.jpg" alt="trollar" height="30px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:aqua; font-weight: bold;">The wonders</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="giza-pyramids.html" style="color:rgb(5, 72, 72); font-weight: bold;">Giza Pyramids</a></li>
+                  <li><a class="dropdown-item" href="great-wall-of-china.html">Great Wall of China</a></li>
+                  <li><a class="dropdown-item" href="petra.html">Petra</a></li>
+                  <li><a class="dropdown-item" href="colosseum.html">Colosseum</a></li>
+                  <li><a class="dropdown-item" href="chichen-itza.html">Chichén Itzá</a></li>
+                  <li><a class="dropdown-item" href="machu-picchu.html">Machu Picchu</a></li>
+                  <li><a class="dropdown-item" href="taj-mahal.html">Taj Mahal</a></li>
+                  <li><a class="dropdown-item" href="christ-the-redeemer.html">Christ the Redeemer</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+<div class="container-fluid p-5 bg-primary text-white text-center">
+  <h1>Giza Pyramids</h1>
+  <p>New 7 Wonders of the world!</p> 
+</div>
+  
+<div class="container mt-5">
+  <p>
+    Located on the outskirts of Cairo, Egypt, the Pyramids of Giza stand as one of the most iconic and awe-inspiring structures in the world. They are the only remaining wonder from the ancient list of the Seven Wonders of the World, a testament to the remarkable engineering and craftsmanship of ancient Egyptian civilization.
+  </p>
+  <h3>
+    History and Construction
+  </h3>
+  <p>
+    The Giza pyramids were built during the Fourth Dynasty of the Old Kingdom of Egypt, around 2580 to 2560 BCE, under the reign of Pharaoh Khufu (also known as Cheops). The Great Pyramid, the largest of the three, was constructed as his tomb. The pyramid is an extraordinary feat of engineering, originally standing at 146 meters (481 feet), though it now reaches 138 meters (455 feet) due to the loss of its outer casing stones.
+  </p>
+  <p>
+    The two smaller pyramids, built for Khufu's son, Pharaoh Khafre, and his grandson, Pharaoh Menkaure, follow the same design principles, though they are less massive. Khafre’s pyramid also features the Great Sphinx of Giza, a colossal statue with the body of a lion and the head of a Pharaoh, believed to represent Khafre himself.
+  </p>
+  <h3>
+    Architectural Marvel
+  </h3>
+  <p>
+    The Giza Pyramids are a remarkable example of ancient Egyptian architectural mastery. Constructed using millions of limestone blocks, some weighing as much as 2.5 tons, the pyramids were built without the modern tools or technology we rely on today. It is still a mystery how the ancient Egyptians managed to transport these massive stones and construct such precise structures.
+  </p>
+  <p>
+    The Great Pyramid of Giza, in particular, is aligned with incredible precision to the cardinal points, and its internal passages and chambers were designed to protect the Pharaoh’s tomb from robbers and to facilitate his journey to the afterlife.
+  </p>
+  <h3>
+    Cultural and Historical Significance
+  </h3>
+  <p>
+    The Pyramids of Giza were not just monumental tombs for Pharaohs but also a central part of Egypt’s religious and cultural practices. They represented the Pharaoh's divine connection to the gods and his eternal life after death. The complex also featured temples, causeways, and burial tombs for high-ranking officials.
+  </p>
+  <p>
+    Over millennia, the pyramids have captivated historians, archaeologists, and travelers. They continue to inspire awe and wonder, embodying the greatness of ancient Egypt. The fact that these massive structures have withstood the test of time, despite centuries of erosion, earthquakes, and looting, makes them a living link to one of the world's earliest civilizations.
+  </p>
+  <h3>
+    A Global Icon
+  </h3>
+  <p>
+    As the last of the original Seven Wonders of the World still standing, the Pyramids of Giza are a symbol of human ingenuity, perseverance, and the timeless quest for immortality. Today, they draw millions of visitors each year who marvel at their grandeur and the mystery surrounding their construction.
+  </p>
+  <p>
+    The Pyramids of Giza, with their rich history and unmatched engineering, remain one of the most awe-inspiring and mysterious landmarks on Earth, continuing to cement their place in the annals of world history.
+  </p>
+</div>
+
+<div w3-include-html="footer.html"></div>
+
+<script>
+  includeHTML();
+</script>
+
+</body>
+
+</html>

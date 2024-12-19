@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain attribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }      
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+      }
+    }
+  };
+</script>
+
+<head>
+  <title>Chichén Itzá | New 7 Wonders of the world!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <section id="header"></section>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="assets/img/trollar.jpg" alt="trollar" height="30px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:aqua; font-weight: bold;">The wonders</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="giza-pyramids.html">Giza Pyramids</a></li>
+                  <li><a class="dropdown-item" href="great-wall-of-china.html">Great Wall of China</a></li>
+                  <li><a class="dropdown-item" href="petra.html">Petra</a></li>
+                  <li><a class="dropdown-item" href="colosseum.html">Colosseum</a></li>
+                  <li><a class="dropdown-item" href="chichen-itza.html" style="color:rgb(5, 72, 72); font-weight: bold;">Chichén Itzá</a></li>
+                  <li><a class="dropdown-item" href="machu-picchu.html">Machu Picchu</a></li>
+                  <li><a class="dropdown-item" href="taj-mahal.html">Taj Mahal</a></li>
+                  <li><a class="dropdown-item" href="christ-the-redeemer.html">Christ the Redeemer</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+
+<div class="container-fluid p-5 bg-primary text-white text-center">
+  <h1>Chichén Itzá</h1>
+  <p>New 7 Wonders of the world!</p> 
+</div>
+  
+<div class="container mt-5">
+  <p>
+    Deep in the heart of Mexico's Yucatán Peninsula lies Chichén Itzá, an awe-inspiring testament to the brilliance of the ancient Maya civilization. Designated as one of the New Seven Wonders of the World and a UNESCO World Heritage Site, Chichén Itzá continues to captivate visitors with its architectural grandeur, astronomical precision, and cultural significance.
+  </p>
+  <h3>
+    History and Construction
+  </h3>
+  <p>
+    Chichén Itzá flourished between 600 and 1200 CE as a major political, religious, and economic hub of the Maya civilization. Its name means "At the Mouth of the Well of the Itzá," referencing the nearby cenotes (natural sinkholes) that were vital for the city’s water supply and held spiritual significance.
+  </p>
+  <p>
+    The city reflects a blend of Maya and Toltec influences, showcasing the fusion of two powerful cultures. This integration is evident in its diverse architectural styles and iconography, which highlight its role as a center of trade and cultural exchange in Mesoamerica.
+  </p>
+  <h3>
+    Architectural Marvel
+  </h3>
+  <p>
+    The centerpiece of Chichén Itzá is El Castillo (The Castle), also known as the Temple of Kukulcán. This iconic step-pyramid stands 30 meters (98 feet) tall and serves as a striking example of the Maya's advanced knowledge of astronomy and mathematics.
+  </p>
+  <p>
+    El Castillo’s design incorporates the Maya calendar: its four sides each have 91 steps, and with the platform at the top, the total equals 365, symbolizing the solar year. During the spring and autumn equinoxes, the interplay of light and shadow creates the illusion of a serpent slithering down the pyramid’s northern staircase, representing the feathered serpent deity Kukulcán.
+  </p>
+  <p>
+    Other notable structures include the Great Ball Court, the largest in Mesoamerica, where ritual games with profound ceremonial importance were played; the Temple of the Warriors, surrounded by a forest of carved columns depicting warriors; and the Sacred Cenote, where offerings of gold, jade, and even human sacrifices were made to the gods.
+  </p>
+  <h3>
+    Cultural and Historical Significance
+  </h3>
+  <p>
+    Chichén Itzá was more than a city; it was a sacred center of Maya spirituality and knowledge. The Maya excelled in astronomy, mathematics, and engineering, creating structures that aligned with celestial events and embodied their complex understanding of the universe.
+  </p>
+  <p>
+    The city's decline began around the 13th century, but its structures and myths lived on. Rediscovered in the 19th century, Chichén Itzá has since become a symbol of the Maya’s enduring legacy.
+  </p>
+  <h3>
+    A Global Icon
+  </h3>
+  <p>
+    Today, Chichén Itzá is one of the most visited archaeological sites in Mexico, attracting millions of travelers annually. Visitors can explore its stunning architecture, intricate carvings, and the mystical cenotes that once sustained and inspired the Maya. Each step through the site offers a journey into the rich culture and achievements of an ancient civilization.
+  </p>
+  <h3>
+    The Timeless Wonder
+  </h3>
+  <p>
+    Chichén Itzá stands as a monument to the ingenuity and spirituality of the Maya, a civilization that harmonized science, religion, and art to create one of the most advanced societies of its time. Its towering pyramids and sacred spaces continue to inspire awe, ensuring that Chichén Itzá remains a timeless wonder and a source of fascination for generations to come.
+  </p>
+</div>
+
+<div w3-include-html="footer.html"></div> 
+
+<script>
+  includeHTML();
+</script>
+
+</body>
+
+</html>
