@@ -1,0 +1,1 @@
+This is a simple site about the New 7 Wonders of the world that I made in a computer science lesson
